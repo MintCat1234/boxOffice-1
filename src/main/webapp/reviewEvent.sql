@@ -1,12 +1,12 @@
 create sequence rv_seq;
 
+drop table review;
 create table review( -- 리뷰게시판
  rvNum NUMBER primary Key, --리뷰게시판번호
  rvTitle VARCHAR2(50), --리뷰게시판 제목
  rvContent VARCHAR2(1000), --리뷰게시판 내용
  id VARCHAR2(20), --사용자 id
  rvGrade NUMBER, -- 평점
- rsCode NUMBER, -- 예약번호
  rvLike NUMBER, -- 좋아요
  rvDate DATE, -- 게시글 작성날짜
  rvDel VARCHAR2(2) default 'n', -- 게시글 삭제

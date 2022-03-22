@@ -8,5 +8,11 @@
 	<select id="reviewList" parameterType="map" resultType="review">
 		select * from (select rowNum rn, a.* from(select * from review order by rvNum desc)a) where rn between #{startRow} and #{endRow}
 	</select>
+	<insert id="insert" parameterType="review">
+		<selectKey keyProperty="rvNum" order="BEFORE" resultType="integer">
+			select nvl(max(rvNum), 0) + 1 rvNum from review
+		</selectKey>
+		insert into review values(#{rvNum}, #{rvTitle}, #{rvContent}, ${id}, #{rvGrade}, 0, sysdate, 'n', #{mvTitle}, 0)
+	</insert>
 </mapper>
 

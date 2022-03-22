@@ -13,7 +13,7 @@ public class Review {
 	 private int rvLike;
 	 private Date rvDate;
 	 private String rvDel;
-	 private String movieTitle;
+	 private String mvTitle;
 	 private int rvReadCount;
 	 
 	public int getRvNum() {
@@ -70,11 +70,11 @@ public class Review {
 	public void setRvDel(String rvDel) {
 		this.rvDel = rvDel;
 	}
-	public String getMovieTitle() {
-		return movieTitle;
+	public String getMvTitle() {
+		return mvTitle;
 	}
-	public void setMovieTitle(String movieTitle) {
-		this.movieTitle = movieTitle;
+	public void setMvTitle(String mvTitle) {
+		this.mvTitle = mvTitle;
 	}
 	public int getRvReadCount() {
 		return rvReadCount;

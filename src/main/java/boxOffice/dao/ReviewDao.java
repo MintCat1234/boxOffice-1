@@ -36,6 +36,9 @@ public class ReviewDao {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		map.put("startRow", startRow);
 		map.put("endRow", endRow);
-		return session.selectList("reviewns.list", map);
+		return session.selectList("reviewns.reviewList", map);
+	}
+	public int insert(Review review) {
+		return session.insert("reviewns.insert", review);
 	}
 }
