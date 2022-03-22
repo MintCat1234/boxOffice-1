@@ -56,6 +56,5 @@ create table member(
 
 select * from member;
 
-drop table member;
 
 insert into member values('test1','11','master',0,0,'010-0000-0000','없음',sysdate,'n');
