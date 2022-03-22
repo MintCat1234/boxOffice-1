@@ -32,7 +32,7 @@ public class ReviewDao {
 		return (int) session.selectOne("reviewns.getTotal");
 	}
 	@SuppressWarnings("unchecked")
-	public List<Review> list(int startRow, int endRow) {
+	public List<Review> reviewList(int startRow, int endRow) {
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		map.put("startRow", startRow);
 		map.put("endRow", endRow);

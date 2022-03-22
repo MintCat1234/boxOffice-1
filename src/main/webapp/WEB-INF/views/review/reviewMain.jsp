@@ -15,10 +15,10 @@
 	<table border="1">
 		<thead>
 			<tr>
-				<th>게시글번호</th>
+				<th>번호</th>
 				<th>영화제목</th>
-				<th>글제목</th>
 				<th>작성자</th>
+				<th>평점</th>
 				<th>작성일</th>
 				<th>조회수</th>
 				<th>추천</th>
@@ -38,8 +38,12 @@
 							<th colspan="6">삭제된 게시글 입니다.</th>
 						</c:if>
 						<c:if test="${review.rvDel != 'y' }">
-							<td>${review.movieTitle }</td>
-							
+							<td><a href="reviewView.re?rvNum=${review.rvNum }&pageNum=${currentPage}">${review.mvTitle }</a></td>
+							<td>${review.id }</td>
+							<td>${review.rvGrade }</td>
+							<td>${review.rvDate }</td>
+							<td>${review.rvReadCount }</td>
+							<td>${review.rvLike }</td>
 						</c:if>
 					</tr>
 				</c:forEach>

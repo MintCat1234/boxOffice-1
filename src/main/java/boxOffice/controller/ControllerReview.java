@@ -14,11 +14,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import boxOffice.service.event.CommandProcess;
+import boxOffice.service.review.CommandProcess;
 // urlPatterns="*.do", 끝이 .do인 url을 처리하겠다
-@WebServlet(urlPatterns="*.ev",	
-	initParams={@WebInitParam(name="config",value="/WEB-INF/ev_command.properties")})
-public class controllerEvent extends HttpServlet {
+@WebServlet(urlPatterns="*.rv",	
+	initParams={@WebInitParam(name="config",value="/WEB-INF/rv_command.properties")})
+public class ControllerReview extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Map<String, Object> commandMap = new HashMap<>();
 //	init method는 doGet() 또는 doPost() 메서드 하기전에 실행할 메서드
@@ -84,7 +84,7 @@ public class controllerEvent extends HttpServlet {
 	    } catch(Throwable e) { throw new ServletException(e); } 
 //	 view는 pgm article에 보여줄 프로그램
 	    RequestDispatcher dispatcher =
-	      	request.getRequestDispatcher("/WEB-INF/views/event/"+view+".jsp");
+	      	request.getRequestDispatcher("/WEB-INF/views/review/"+view+".jsp");
 	   dispatcher.forward(request, response);
 	}
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

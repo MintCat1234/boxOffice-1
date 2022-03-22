@@ -10,7 +10,7 @@ create table review( -- 리뷰게시판
  rvLike NUMBER, -- 좋아요
  rvDate DATE, -- 게시글 작성날짜
  rvDel VARCHAR2(2) default 'n', -- 게시글 삭제
- movieTitle VARCHAR2(500), -- 영화제목
+ mvTitle VARCHAR2(500), -- 영화제목
  rvReadCount NUMBER -- 리뷰 조회수
 );
 select * from review;
