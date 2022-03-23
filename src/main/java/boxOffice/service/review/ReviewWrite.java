@@ -2,6 +2,7 @@ package boxOffice.service.review;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import boxOffice.dao.ReviewDao;
 import boxOffice.model.Review;
@@ -10,8 +11,7 @@ public class ReviewWrite implements CommandProcess {
 
 	@Override
 	public String requestPro(HttpServletRequest request, HttpServletResponse response) {
-
-
+		/* HttpSession session = request.getSession(); */
 
 		String rvTitle = request.getParameter("rvTitle");
 		String id = request.getParameter("id");
@@ -24,6 +24,7 @@ public class ReviewWrite implements CommandProcess {
 
 
 		review.setRvTitle(rvTitle);
+		/* String id= (String)session.getAttribute("id"); */
 		review.setId(id);
 		review.setMvTitle(mvTitle);
 		review.setRvGrade(rvGrade);
