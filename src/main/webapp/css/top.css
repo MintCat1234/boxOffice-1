@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+#header {
+	font-size: 30px;
+	padding-top: 30px;
+	display: flex;
+	justify-content: center;
+	margin-right: 100px;
+}
+
+.hd {
+	display: flex;
+}
+
+.signin {
+	font-size: 20px;
+	margin-left: 150px;
+	margin-top:  32px;
+}
+
+.si {
+	font-size: 16px;
+	display: none;
+	margin-top: 5px;
+}
+
+.ticket {
+	margin-right: 40px;
+	margin-top:  20px;
+}
+
+.logo {
+	 margin-right: 10px;
+}
+
+.menu {
+	margin-right: 40px;
+	margin-top:  20px;
+}
+
+.menu2 {
+	font-size: 25px;
+	display: none;
+	margin-top: 5px;
+
+}
+
+.hd div:hover ul {
+ display: block;
+ 
+}
+
+a {
+  color: #F95700;
+  text-decoration : none;
+}
+
+ul{
+	padding: 0;
+	list-style: none;
+	text-align: center
+}
+
+li {
+	padding-top: 5px;
+}

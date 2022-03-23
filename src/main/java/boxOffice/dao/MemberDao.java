@@ -1,5 +1,40 @@
 package boxOffice.dao;
 
-public class MemberDao {
+import java.io.Reader;
 
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
+import boxOffice.model.*;
+
+public class MemberDao {
+	private static MemberDao instance = new MemberDao();
+	private MemberDao() {	
+	}
+	public static MemberDao getInstance() {
+		return instance;
+	}
+	
+	private static SqlSession session;
+	static {     // 초기화 블록
+		try {
+			Reader reader = Resources.getResourceAsReader("configuration.xml");
+			SqlSessionFactory ssf = new SqlSessionFactoryBuilder().build(reader);
+			session = ssf.openSession(true);
+		} catch (Exception e) {
+			System.out.println("연결에러 : " + e.getMessage());
+		}
+	}
+	public boxOffice.model.Member select(String id) {
+		return (Member) session.selectOne("memberbo.select",id);
+	}
+	
+	public int insert(Member member) {
+		return session.insert("memberbo.insert", member);
+	}
+	
+	
+	
 }
