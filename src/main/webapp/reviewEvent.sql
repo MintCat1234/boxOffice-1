@@ -14,6 +14,23 @@ create table review( -- 리뷰게시판
  rvReadCount NUMBER -- 리뷰 조회수
 );
 select * from review;
+
+insert into REVIEW values(rv_seq.nextval, '재밌음', '재밌음', 'test1', '5', 0, sysdate, 'n', '씽2게더', 0);
+insert into REVIEW values(rv_seq.nextval, '노잼', '노잼', 'test2', '2', 0, sysdate, 'n', '더 배트맨', 0);
+insert into REVIEW values(rv_seq.nextval, '재밌음', '재밌음', 'test3', '4', 0, sysdate, 'n', '극장판 주술회전 0', 0);
+insert into REVIEW values(rv_seq.nextval, '노잼', '노잼', 'test4', '1', 0, sysdate, 'n', '이상한 나라의 수학자', 0);
+insert into REVIEW values(rv_seq.nextval, '재밌음', '재밌음', 'test5', '5', 0, sysdate, 'n', '씽2게더', 0);
+insert into REVIEW values(rv_seq.nextval, '노잼', '노잼', 'test6', '3', 0, sysdate, 'n', '더 배트맨', 0);
+insert into REVIEW values(rv_seq.nextval, '재밌음', '재밌음', 'test', '3', 0, sysdate, 'n', '이상한 나라의 수학자', 0);
+insert into REVIEW values(rv_seq.nextval, '노잼', '노잼', 'test7', '2', 0, sysdate, 'n', '이상한 나라의 수학자', 0);
+insert into REVIEW values(rv_seq.nextval, '재밌음', '재밌음', 'test8', '5', 0, sysdate, 'n', '씽2게더', 0);
+insert into REVIEW values(rv_seq.nextval, '노잼', '노잼','test9', '3', 0, sysdate, 'n', '극장판 주술회전 0', 0);
+insert into REVIEW values(rv_seq.nextval, '재밌음', '재밌음', 'test10', '5', 0, sysdate, 'n', '문폴', 0);
+insert into REVIEW values(rv_seq.nextval, '노잼', '노잼', 'test12', '1', 0, sysdate, 'n', '문폴', 0);
+insert into REVIEW values(rv_seq.nextval, '잼', '잼', 'test13', '1', 0, sysdate, 'n', '씽2게더', 0);
+insert into REVIEW values(rv_seq.nextval, '노잼', '노잼', 'test14', '1', 0, sysdate, 'n', '문폴', 0);
+insert into REVIEW values(rv_seq.nextval, '잼', '잼', 'test15', '1', 0, sysdate, 'n', '더 배트맨', 0);
+insert into REVIEW values(rv_seq.nextval, '씨잼', '씨잼', 'test16', '1', 0, sysdate, 'n', '극장판 주술회전 0', 0);
 -----------------------------------------------------------------------------------------------------------------------------
 create sequence ev_seq;
 create table event(	-- 이벤트게시판

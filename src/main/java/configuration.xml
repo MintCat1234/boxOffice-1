@@ -8,6 +8,7 @@
 		<!-- boxOffice.model에 있는 Event의 별칭을 event로 부르기 -->
 		<typeAlias alias="event" type="boxOffice.model.Event" />
 		<typeAlias alias="review" type="boxOffice.model.Review" />
+		<typeAlias alias="member" type="boxOffice.model.Member"/>
 	</typeAliases>
 	<!-- DataBase 연결에 대한 정보 -->
 	<environments default="development">
@@ -25,5 +26,6 @@
 	<mappers>
 		<mapper resource="event.xml" />
 		<mapper resource="review.xml" />
+		<mapper resource="member.xml"/>
 	</mappers>
 </configuration>
