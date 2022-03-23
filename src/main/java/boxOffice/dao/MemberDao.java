@@ -27,7 +27,7 @@ public class MemberDao {
 			System.out.println("연결에러 : " + e.getMessage());
 		}
 	}
-	public boxOffice.model.Member select(String id) {
+	public Member select(String id) {
 		return (Member) session.selectOne("memberbo.select",id);
 	}
 	
