@@ -5,9 +5,6 @@
 	<select id="getTotal" resultType="integer" parameterType="string">
 		select count(*) from review 
 	</select>
-<select id="getTotal" resultType="integer" parameterType="string">
-      select count(*) from review 
-   </select>
 	<select id="reviewList" parameterType="map" resultType="review">
 		select * from (select rowNum rn, a.* from(select * from review order by rvNum desc)a) where rn between #{startRow} and #{endRow}
 	</select>
