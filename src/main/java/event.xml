@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="eventns">
+	<select id="getTotal" parameterType="string" resultType="integer" >
+		select count(*) from event
+	</select>
+	<select id="list" parameterType="map" resultType="event">
+		select * from (select rowNum rn, a.* from(select * from event order by evNum desc)a) where rn between #{startRow} and #{endRow}
+	</select>
+</mapper>
+
