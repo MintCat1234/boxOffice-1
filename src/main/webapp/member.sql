@@ -1,3 +1,5 @@
+drop table member;
+
 create table member(
 	id varchar2(20) primary key, --아이디
 	password varchar2(20), -- 패스워드
@@ -11,8 +13,6 @@ create table member(
 );
 
 select * from member;
-
-drop table member;
 
 insert into member values('test1','123','신현태',0,0,'010-0000-0000','없음',sysdate,'n');
 insert into member values('test2','123','김진성',0,0,'010-0000-0000','없음',sysdate,'n');
