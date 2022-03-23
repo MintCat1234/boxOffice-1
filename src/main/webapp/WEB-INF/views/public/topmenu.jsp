@@ -19,7 +19,7 @@
 				<li><a href="#">종료</a></li>
 			</ul>
 		</div>
-		<div class="menu"><a href="#">게시판</a>
+		<div class="menu"><a href="reviewMain.rv">게시판</a>
 			<ul class="menu2">
 				<li><a href="#">리뷰</a></li>
 			</ul>
