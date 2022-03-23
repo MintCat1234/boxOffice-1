@@ -8,9 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<header>
-</header>
-
+<header></header>
 <div id="mainContainer" align="center">
 	<table border="1">
 		<thead>
