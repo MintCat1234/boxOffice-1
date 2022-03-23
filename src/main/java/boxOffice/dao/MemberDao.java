@@ -34,7 +34,4 @@ public class MemberDao {
 	public int insert(Member member) {
 		return session.insert("memberbo.insert", member);
 	}
-	
-	
-	
 }
