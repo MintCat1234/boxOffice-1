@@ -14,10 +14,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import boxOffice.service.main.*;
-@WebServlet(urlPatterns="*.do",	
-	initParams={@WebInitParam(name="config",value="/WEB-INF/ma_command.properties")})
-public class ControllerMain extends HttpServlet {
+import boxOffice.service.signin.CommandProcess;
+@WebServlet(urlPatterns="*.si",	
+	initParams={@WebInitParam(name="config",value="/WEB-INF/si_command.properties")})
+public class ControllerSignin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private Map<String, Object> commandMap = new HashMap<>();
 	public void init(ServletConfig config) throws ServletException { 
@@ -56,9 +56,7 @@ public class ControllerMain extends HttpServlet {
 	               // key가 message.do
 	               // 값이 Message객체
 	          } catch (Exception e) {
-	        	   System.out.println("연결에러 : " + e.getMessage());
 	               throw new ServletException(e);
-	               
 	          }
 	     }
 	}
@@ -81,7 +79,7 @@ public class ControllerMain extends HttpServlet {
 	          // view는 "message.jsp" 문자
 	    } catch(Throwable e) { throw new ServletException(e); } 
 	    RequestDispatcher dispatcher =
-	      	request.getRequestDispatcher("/WEB-INF/views/main/"+view+".jsp");//view는 pgm article에 보여줄것
+	      	request.getRequestDispatcher("/WEB-INF/views/signin/"+view+".jsp");//view는 pgm article에 보여줄것
 	   dispatcher.forward(request, response);
 	}
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
