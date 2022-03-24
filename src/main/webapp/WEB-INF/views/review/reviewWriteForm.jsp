@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div id="reviewMain" align="center">
+	<div id="reviewWrete.rv" align="center">
 		<form action="reviewWrite.rv" name="rvForm" id="rvForm">
 		<input type="hidden" name="rvNum" value="${rvNum }">
 		<input type="hidden" name="rvLike" value="${rvLike }">

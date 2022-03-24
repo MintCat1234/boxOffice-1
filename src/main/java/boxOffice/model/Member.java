@@ -13,6 +13,7 @@ public class Member {
 	private String address;
 	private Date reg_date;
 	private String memberDel;
+	
 	public String getId() {	
 		return id;
 	}

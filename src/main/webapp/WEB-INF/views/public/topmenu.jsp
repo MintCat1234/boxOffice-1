@@ -21,7 +21,7 @@
 		</div>
 		<div class="menu"><a href="#">게시판</a>
 			<ul class="menu2">
-				<li><a href="#">리뷰</a></li>
+				<li><a href="reviewMain.rv">리뷰</a></li>
 			</ul>
 		</div>
 		<div class="logo"><img alt="로고" src="images/logo/boxoffice.png" height="65px" width="65px"></div>
