@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script type="text/javascript" src="../../../js/jquery.js"></script>
 </head>
 <body>
 	<div id="reviewWrete.rv" align="center">
@@ -36,13 +37,8 @@
 				</tr>
 				<tr>
 					<th>평점</th>
-					<td><select name="rvGrade" required="required">
-						<option value="1">★</option>
-						<option value="2">★★</option>
-						<option value="3">★★★</option>
-						<option value="4">★★★★</option>
-						<option value="5">★★★★★</option>
-					</select></td>
+					<td><input type="range" min="1" max="10" class="slider" id="myRange" name="rvGrade">
+						<span id="value"></span></td>
 				</tr>
 				<tr>
 					<th>내용</th>
@@ -54,5 +50,17 @@
 			</table>
 		</form>
 	</div>
+	
+<script type="text/javascript">
+var slider = document.getElementById("myRange");
+var output = document.getElementById("value");
+output.innerHTML = "★" + slider.value;
+
+slider.oninput = function() {
+    output.innerHTML ="★" + this.value;
+}
+</script>
+
+	
 </body>
 </html>
