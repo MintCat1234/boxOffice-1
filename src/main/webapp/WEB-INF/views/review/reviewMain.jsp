@@ -10,50 +10,50 @@
 <body>
 <header></header>
 <div id="mainContainer" align="center">
-<div id="tableContainer" align="center" style="width: 70%">
-	<table border="0" style="width: 100%; text-align: center;">
-		<thead>
-			<tr>
-				<th>번호</th>
-				<th>리뷰제목</th>
-				<th>영화제목</th>
-				<th>작성자</th>
-				<th>평점</th>
-				<th>작성일</th>
-				<th>조회수</th>
-				<th>추천</th>
-			</tr>
-		</thead>
-		<tbody>
-			<c:if test="${empty list }">
+	<div id="mainTableContainer" align="center" style="width: 70%">
+		<table border="0" style="width: 100%; text-align: center;">
+			<thead>
 				<tr>
-					<th colspan="7">게시글이 없습니다.</th>
+					<th>번호</th>
+					<th>리뷰제목</th>
+					<th>영화제목</th>
+					<th>작성자</th>
+					<th>평점</th>
+					<th>작성일</th>
+					<th>조회수</th>
+					<th>추천</th>
 				</tr>
-			</c:if>
-			<c:if test="${not empty list }">
-				<c:forEach items="${list }" var="review">
+			</thead>
+			<tbody>
+				<c:if test="${empty list }">
 					<tr>
-						<td>${review.rvNum }</td>
-						<c:if test="${review.rvDel == 'y' }">
-							<th colspan="6">삭제된 게시글 입니다.</th>
-						</c:if>
-						<c:if test="${review.rvDel != 'y' }">
-							<td><a href="reviewView.rv?rvNum=${review.rvNum }&pageNum=${currentPage}">${review.rvContent }</a></td>
-							<td>${review.mvTitle }</td>
-							<td>${review.id }</td>
-							<td>★${review.rvGrade }</td>
-							<td>${review.rvDate }</td>
-							<td>${review.rvReadCount }</td>
-							<td>${review.rvLike }</td>
-						</c:if>
+						<th colspan="8">게시글이 없습니다.</th>
 					</tr>
-				</c:forEach>
-			</c:if>
-		</tbody>
-	</table>
-	<br>
-	<button onclick="location.href='reviewWriteForm.rv?num=0&pageNum=1'" style="float: right;">리뷰작성</button>
-</div>
+				</c:if>
+				<c:if test="${not empty list }">
+					<c:forEach items="${list }" var="review">
+						<tr>
+							<td>${review.rvNum }</td>
+							<c:if test="${review.rvDel == 'y' }">
+								<th colspan="6">삭제된 게시글 입니다.</th>
+							</c:if>
+							<c:if test="${review.rvDel != 'y' }">
+								<td><a href="reviewView.rv?rvNum=${review.rvNum }&pageNum=${currentPage}">${review.rvTitle }</a></td>
+								<td>${review.mvTitle }</td>
+								<td>${review.id }</td>
+								<td>★${review.rvGrade }</td>
+								<td>${review.rvDate }</td>
+								<td>${review.rvReadCount }</td>
+								<td>${review.rvLike }</td>
+							</c:if>
+						</tr>
+					</c:forEach>
+				</c:if>
+			</tbody>
+		</table>
+		<br>
+		<button onclick="location.href='reviewWriteForm.rv?num=0&pageNum=1'" style="float: right;">리뷰작성</button>
+	</div>
 </div>
 <br>
 <br>

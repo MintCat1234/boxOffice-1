@@ -34,8 +34,8 @@ public class ReviewMain implements CommandProcess {
 		int endPage = startPage + PAGE_PER_BLOCK - 1;
 //		만약 endPage가 총페이지보다 크면 endPage는 총페이지로 변경
 		if (endPage > totalPage) endPage = totalPage;
-
 		List<Review> list = rd.reviewList(startRow, endRow);
+		
 				
 		request.setAttribute("list", list);
 		request.setAttribute("totalPage", totalPage);

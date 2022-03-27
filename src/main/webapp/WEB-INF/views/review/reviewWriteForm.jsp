@@ -5,7 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript" src="../../../js/jquery.js"></script>
 </head>
 <body>
 	<div id="reviewWrete.rv" align="center">
@@ -13,6 +12,7 @@
 		<input type="hidden" name="rvNum" value="${rvNum }">
 		<input type="hidden" name="rvLike" value="${rvLike }">
 		<input type="hidden" name="rvReadCount" value="${rvReadCount }">
+		<input type="hidden" name="id" value="${id }">
 			<table border="1">
 				<caption>리뷰작성</caption>
 				<tr>
