@@ -8,14 +8,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<header>
-</header>
-
+<header></header>
 <div id="mainContainer" align="center">
-	<table border="1">
+<div id="tableContainer" align="center" style="width: 70%">
+	<table border="0" style="width: 100%; text-align: center;">
 		<thead>
 			<tr>
 				<th>번호</th>
+				<th>리뷰제목</th>
 				<th>영화제목</th>
 				<th>작성자</th>
 				<th>평점</th>
@@ -38,9 +38,10 @@
 							<th colspan="6">삭제된 게시글 입니다.</th>
 						</c:if>
 						<c:if test="${review.rvDel != 'y' }">
-							<td><a href="reviewView.re?rvNum=${review.rvNum }&pageNum=${currentPage}">${review.mvTitle }</a></td>
+							<td><a href="reviewView.rv?rvNum=${review.rvNum }&pageNum=${currentPage}">${review.rvContent }</a></td>
+							<td>${review.mvTitle }</td>
 							<td>${review.id }</td>
-							<td>${review.rvGrade }</td>
+							<td>★${review.rvGrade }</td>
 							<td>${review.rvDate }</td>
 							<td>${review.rvReadCount }</td>
 							<td>${review.rvLike }</td>
@@ -50,8 +51,12 @@
 			</c:if>
 		</tbody>
 	</table>
-	<button onclick="location.href='reviewWriteForm.rv?num=0&pageNum=1'">리뷰작성</button>
+	<br>
+	<button onclick="location.href='reviewWriteForm.rv?num=0&pageNum=1'" style="float: right;">리뷰작성</button>
 </div>
+</div>
+<br>
+<br>
 <br>
 <div align="center">
 	<!-- 앞에 보여줄 것이 있다 -->

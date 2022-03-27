@@ -9,4 +9,3 @@
 		select * from (select rowNum rn, a.* from(select * from event order by evNum desc)a) where rn between #{startRow} and #{endRow}
 	</select>
 </mapper>
-

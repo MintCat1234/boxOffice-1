@@ -7,10 +7,10 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
-public class reservationDao {
-	private static reservationDao instance = new reservationDao();
-	private reservationDao() {}
-	public static reservationDao getInstance() {
+public class ReservationDao {
+	private static ReservationDao instance = new ReservationDao();
+	private ReservationDao() {}
+	public static ReservationDao getInstance() {
 		return instance;
 	}
 	private static SqlSession session;
@@ -23,5 +23,7 @@ public class reservationDao {
 			System.out.println("연결에러 :"+e.getMessage());
 		}
 	}
+	
+	
 }
 

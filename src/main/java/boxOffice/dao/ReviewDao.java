@@ -41,4 +41,10 @@ public class ReviewDao {
 	public int insert(Review review) {
 		return session.insert("reviewns.insert", review);
 	}
+	public void readCountUpdate(int rvNum) {
+		session.update("reviewns.readCountUpdate", rvNum);
+	}
+	public Review selectRview(int rvNum) {
+		return (Review) session.selectOne("reviewns.selectRview", rvNum);
+	}
 }

@@ -2,11 +2,14 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="reviewns">
-	<select id="getTotal" resultType="integer">
+	<select id="getTotal" resultType="integer" parameterType="string">
 		select count(*) from review 
 	</select>
 	<select id="reviewList" parameterType="map" resultType="review">
 		select * from (select rowNum rn, a.* from(select * from review order by rvNum desc)a) where rn between #{startRow} and #{endRow}
+	</select>
+	<select id="selectRview" parameterType="integer" resultType="review">
+		select * from review where rvNum = #{rvNum}
 	</select>
 	<insert id="insert" parameterType="review">
 		<selectKey keyProperty="rvNum" order="BEFORE" resultType="integer">
@@ -14,5 +17,9 @@
 		</selectKey>
 		insert into review values(#{rvNum}, #{rvTitle}, #{rvContent}, ${id}, #{rvGrade}, 0, sysdate, 'n', #{mvTitle}, 0)
 	</insert>
+	<update id="readCountUpdate" parameterType="integer">
+		update review set rvReadCount = rvReadCount +1 where rvNum = #{rvNum}
+	</update>
+	
 </mapper>
 
